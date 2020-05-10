@@ -1,0 +1,6 @@
+*.txt
+*.pdf
+data_collect/
+.vscode
+.DS_Store
+node_modules
