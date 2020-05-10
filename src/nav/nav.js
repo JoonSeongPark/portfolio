@@ -50,28 +50,12 @@ class Nav {
     window.addEventListener("scroll", () => {
       const scrollPos = window.scrollY || document.documentElement.scrollTop;
       const scrollBottom =  scrollPos + window.innerHeight >= document.body.offsetHeight
-    
-      if (scrollPos < 971) {
-        top.style.borderBottomColor = '#0f4f81';
-        edu.style.borderBottomColor = 'transparent'
-        act.style.borderBottomColor = 'transparent'
-        proj.style.borderBottomColor = 'transparent'
-      } else if (scrollPos < 1363){
-        top.style.borderBottomColor = 'transparent'
-        edu.style.borderBottomColor = '#0f4f81';
-        act.style.borderBottomColor = 'transparent'
-        proj.style.borderBottomColor = 'transparent'
-      } else if (scrollPos <2142 && !scrollBottom) {
-        top.style.borderBottomColor = 'transparent'
-        edu.style.borderBottomColor = 'transparent'
-        act.style.borderBottomColor = '#0f4f81';
-        proj.style.borderBottomColor = 'transparent'
-      } else if (scrollPos >= 2142 || scrollBottom) {
-        top.style.borderBottomColor = 'transparent'
-        edu.style.borderBottomColor = 'transparent'
-        act.style.borderBottomColor = 'transparent'
-        proj.style.borderBottomColor = '#0f4f81'
-      }
+      
+      top.classList = scrollPos < 971 ? 'active' : ''
+      edu.classList = scrollPos < 1363 && scrollPos >= 971 ? 'active' : ''
+      act.classList = scrollPos < 2142 && scrollPos >= 971 && !scrollBottom ? 'active' : ''
+      proj.classList = scrollPos >= 2142 ? 'active' : ''
+      
       arrow.style.display = scrollPos < 971 ? "none" : "block";
     });
   }
