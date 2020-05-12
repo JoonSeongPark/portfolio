@@ -47,12 +47,9 @@ nav .nav-right ul li {
 }
 
 nav .nav-right ul li a {
-  text-decoration: transparent;
-  color: #0f4f81;
   display: flex;
   padding: 7px 20px;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s linear;
+  
 }
 
 nav .nav-right a:hover {
@@ -60,12 +57,13 @@ nav .nav-right a:hover {
   padding: 7px 18px;
 }
 
-#top {
-  border-bottom-color: #0f4f81;
-}
 
 #edu:hover {
   padding: 7px 17px 7px 18px;
+}
+.nav-tab {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.1s ease;
 }
 .active {
   border-bottom-color: #0f4f81;
