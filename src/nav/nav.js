@@ -16,11 +16,11 @@ class Nav {
     const rightDiv = document.createElement("div");
     rightDiv.classList.add("nav-right");
     const ul = document.createElement("ul");
-    ul.innerHTML = "<li><a href='#home' id='top'><p>Home</p></a></li>";
+    ul.innerHTML = "<li><a href='#home' id='top' class='nav-tab active'><p>Home</p></a></li>";
     ul.innerHTML +=
-      "<li><a href='#education' id='edu'><p>Education</p></a></li>";
-    ul.innerHTML += "<li><a href='#activity' id='act'><p>Activity</p></a></li>";
-    ul.innerHTML += "<li><a href='#project' id='proj'><p>Project</p></a></li>";
+      "<li><a href='#education' id='edu' class='nav-tab'><p>Education</p></a></li>";
+    ul.innerHTML += "<li><a href='#activity' id='act' class='nav-tab'><p>Activity</p></a></li>";
+    ul.innerHTML += "<li><a href='#project' id='proj' class='nav-tab'><p>Project</p></a></li>";
 
     leftDiv.appendChild(p);
 
@@ -51,10 +51,10 @@ class Nav {
       const scrollPos = window.scrollY || document.documentElement.scrollTop;
       const scrollBottom =  scrollPos + window.innerHeight >= document.body.offsetHeight
       
-      top.classList = scrollPos < 971 ? 'active' : ''
-      edu.classList = scrollPos < 1363 && scrollPos >= 971 ? 'active' : ''
-      act.classList = scrollPos < 2142 && scrollPos >= 971 && !scrollBottom ? 'active' : ''
-      proj.classList = scrollPos >= 2142 ? 'active' : ''
+      top.className = scrollPos < 971 ? 'nav-tab active' : 'nav-tab'
+      edu.className = scrollPos < 1363 && scrollPos >= 971 ? 'nav-tab active' : 'nav-tab'
+      act.className = scrollPos < 2142 && scrollPos >= 1363 && !scrollBottom ? 'nav-tab active' : 'nav-tab'
+      proj.className = scrollPos >= 2142 ? 'nav-tab active' : 'nav-tab'
       
       arrow.style.display = scrollPos < 971 ? "none" : "block";
     });
