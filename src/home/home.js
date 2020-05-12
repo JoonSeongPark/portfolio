@@ -19,7 +19,8 @@ class Home {
   
     
     content.innerHTML = `
-    <h1>박 준 성 <small>(JoonSeong Park)</small></h1>
+    <h2>박 준 성 <small>(JoonSeong Park)</small></h2>
+    
     <span>Web Front-end Developer</span>
 
     <strong>생년월일</strong>
@@ -35,7 +36,7 @@ class Home {
     <a href="https://github.com/joonseongpark"><p>https://github.com/joonseongpark</p></a>
     
     <strong>주소</strong>
-    <p>서울시 서대문구 신촌로 109, 1415호</p>
+    <p>서울시 서대문구 신촌로 109, 1415호</p>
     `
 
 
