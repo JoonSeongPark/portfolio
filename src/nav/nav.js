@@ -48,13 +48,19 @@ class Nav {
     
     
     window.addEventListener("scroll", () => {
-      const scrollPos = window.scrollY || document.documentElement.scrollTop;
-      const scrollBottom =  scrollPos + window.innerHeight >= document.body.offsetHeight
+      const navHeight = document.querySelector('nav').offsetHeight + 1
       
-      top.className = scrollPos < 971 ? 'nav-tab active' : 'nav-tab'
-      edu.className = scrollPos < 1363 && scrollPos >= 971 ? 'nav-tab active' : 'nav-tab'
-      act.className = scrollPos < 2142 && scrollPos >= 1363 && !scrollBottom ? 'nav-tab active' : 'nav-tab'
-      proj.className = scrollPos >= 2142 ? 'nav-tab active' : 'nav-tab'
+      const eduPos = document.querySelectorAll('.component')[0].offsetTop - navHeight
+      const actPos = document.querySelectorAll('.component')[1].offsetTop - navHeight
+      const pjtPos = document.querySelector('.project').offsetTop - navHeight
+
+      const scrollPos = window.scrollY || document.documentElement.scrollTop;
+      const scrollBottom =  (scrollPos + window.innerHeight) >= document.body.offsetHeight
+      
+      top.className = scrollPos < eduPos && !scrollBottom ? 'nav-tab active' : 'nav-tab'
+      edu.className = scrollPos < actPos && scrollPos >= eduPos && !scrollBottom ? 'nav-tab active' : 'nav-tab'
+      act.className = scrollPos < pjtPos && scrollPos >= actPos && !scrollBottom ? 'nav-tab active' : 'nav-tab'
+      proj.className = scrollPos >= pjtPos || scrollBottom ? 'nav-tab active' : 'nav-tab'
       
       arrow.style.display = scrollPos < 971 ? "none" : "block";
     });
