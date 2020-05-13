@@ -1,3 +1,14 @@
+const profileObj = {
+  korName: "박 준 성",
+  engName: "JoonSeong Park",
+  field: "Web Front-end Developer",
+  birthday: "1993.10.08.",
+  phoneNumber: "010.2001.6554",
+  email: "rytt@yonsei.ac.kr",
+  github: "https://github.com/joonseongpark",
+  skills: ["HTML", "CSS", "JavaScript", "Webpack", "Python"],
+};
+
 const eduArr = [
   { period: "2009.03 - 2012.02", info: ["대구 대륜고등학교 졸업"] },
   { period: "2013.03 - 2020.02", info: ["연세대학교", "정보산업공학과 졸업"] },
@@ -34,4 +45,4 @@ const actArr = [
   },
 ];
 
-export { eduArr, actArr };
+export { profileObj, eduArr, actArr };
