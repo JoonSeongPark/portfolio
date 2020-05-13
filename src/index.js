@@ -7,7 +7,7 @@ import Footer from "./footer/footer";
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
-import { eduArr, actArr } from "./data";
+import { profileObj, eduArr, actArr } from "./data";
 
 import "./index.css";
 
@@ -20,7 +20,7 @@ nav.goUp();
 nav.onScoll();
 
 const home = new Home();
-home.render();
+home.render(profileObj);
 
 const education = new CommonComponent();
 education.render("EDUCATION", eduArr);

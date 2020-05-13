@@ -1,7 +1,7 @@
 import './home.css'
 
 class Home {
-  render()  {
+  render(obj)  {
     const body = document.querySelector('body')
     const home = document.createElement('header')
 
@@ -19,24 +19,24 @@ class Home {
   
     
     content.innerHTML = `
-    <h2>박 준 성 <small>(JoonSeong Park)</small></h2>
+    <h2>${obj.korName} <small>(${obj.engName})</small></h2>
     
-    <span>Web Front-end Developer</span>
+    <span>${obj.field}</span>
 
     <strong>생년월일</strong>
-    <p>1993.10.08.</p>
+    <p>${obj.birthday}</p>
     
     <strong>전화번호</strong>
-    <p>010.2001.6554</p>
+    <p>${obj.phoneNumber}</p>
     
     <strong>이메일</strong>
-    <p>rytt@yonsei.ac.kr</p>
+    <p>${obj.email}</p>
     
     <strong>깃허브</strong>
-    <a href="https://github.com/joonseongpark"><p>https://github.com/joonseongpark</p></a>
+    <a href="${obj.github}"><p>${obj.github}</p></a>
     
-    <strong>주소</strong>
-    <p>서울시 서대문구 신촌로 109, 1415호</p>
+    <strong>기술스택</strong>
+    <p>${obj.skills.join(', ')}</p>
     `
 
 
