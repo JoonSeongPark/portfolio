@@ -54,12 +54,16 @@ class Project {
       switch (e.target.classList[0]) {
         case 'pjt1':
           window.open("https://maskod.kr")
+          break
         case 'pjt2':
           window.open("https://github.com/joonseongpark/fwine")
+          break
         case 'pjt3':
           window.open("https://github.com/joonseongpark/vqa")
+          break
         case 'pjt4':
           window.open("https://joonseongpark.github.io/ybigtabaseball/")
+          break
       }
     });
   }
