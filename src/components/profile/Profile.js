@@ -22,6 +22,7 @@ const Profile = ({ korean }) => {
   ];
   return (
     <BackgroundContainer>
+      <PseudoDiv id={"Home"} />
       <ProfileContainer>
         <ProfileImage />
         <ContentContainer>
@@ -61,6 +62,11 @@ const BackgroundContainer = styled.div`
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.7);
   }
+`;
+
+const PseudoDiv = styled.div`
+  position: absolute;
+  top: -4rem;
 `;
 
 const ProfileContainer = styled.div`

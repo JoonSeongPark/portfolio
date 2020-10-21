@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import Title from "./Title";
 import TimeLine from "./TimeLine";
@@ -98,14 +99,24 @@ const ContentList = ({ korean }) => {
   return (
     <>
       {contentData.map((data) => (
-        <div key={data.id}>
+        <StyledContainer key={data.id}>
+          <PseudoDiv id={data.id} />
           <Title title={data.title} />
 
           <TimeLine infoArr={data.infoArr} />
-        </div>
+        </StyledContainer>
       ))}
     </>
   );
 };
+
+const StyledContainer = styled.div`
+  position: relative;
+`;
+
+const PseudoDiv = styled.div`
+  position: absolute;
+  top: -4rem;
+`;
 
 export default ContentList;

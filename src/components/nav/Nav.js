@@ -5,7 +5,7 @@ import { SiGoogletranslate } from "react-icons/si";
 
 import logo from "../../../public/images/logo.png";
 
-const navList = ["Home", "Education", "Activity", "Project"];
+const navList = ["Home", "Education", "Experience", "Project"];
 
 const Nav = ({ setKorean }) => {
   return (
@@ -13,7 +13,7 @@ const Nav = ({ setKorean }) => {
       <img src={logo} height={"100%"} />
       <StyledUl>
         <StyledLi>
-          <SiGoogletranslate onClick={() => setKorean((prev) => !prev)} />
+          <StyledIcon onClick={() => setKorean((prev) => !prev)} />
         </StyledLi>
         {navList.map((nav, idx) => (
           <StyledLi key={idx}>
@@ -50,6 +50,13 @@ const StyledUl = styled.ul`
 
 const StyledLi = styled.li`
   margin: 0.2rem 1rem 0;
+`;
+
+const StyledIcon = styled(SiGoogletranslate)`
+  cursor: pointer;
+  &:hover {
+    color: black;
+  }
 `;
 
 const StyledA = styled.a`
