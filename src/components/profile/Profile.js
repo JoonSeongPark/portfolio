@@ -4,7 +4,7 @@ import styled from "styled-components";
 import background from "../../../public/images/background.jpg";
 import profile from "../../../public/images/profile.jpeg";
 
-import Content from "./Content";
+import ProfileContent from "./ProfileContent";
 
 const Profile = ({ korean }) => {
   const profileData = [
@@ -24,7 +24,7 @@ const Profile = ({ korean }) => {
     <BackgroundContainer>
       <ProfileContainer>
         <ProfileImage />
-        <ProfileContent>
+        <ContentContainer>
           <StyledH2>
             박 준 성 <small>(JoonSeong Park)</small>
           </StyledH2>
@@ -32,9 +32,9 @@ const Profile = ({ korean }) => {
           <StyledSpan>Web Front-end Developer</StyledSpan>
 
           {profileData.map((obj, idx) => (
-            <Content key={idx} obj={obj} aTag={idx === 3} />
+            <ProfileContent key={idx} obj={obj} aTag={idx === 3} />
           ))}
-        </ProfileContent>
+        </ContentContainer>
       </ProfileContainer>
     </BackgroundContainer>
   );
@@ -83,7 +83,7 @@ const ProfileImage = styled.div`
   width: 50%;
 `;
 
-const ProfileContent = styled.div`
+const ContentContainer = styled.div`
   height: 100%;
   width: 50%;
   display: flex;
