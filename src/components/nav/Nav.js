@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
+import { SiGoogletranslate } from "react-icons/si";
+
 import logo from "../../../public/images/logo.png";
 
 const navList = ["Home", "Education", "Activity", "Project"];
 
-const Nav = () => {
+const Nav = ({ setKorean }) => {
   return (
     <StyledNavContainer>
       <img src={logo} height={"100%"} />
       <StyledUl>
+        <StyledLi>
+          <SiGoogletranslate onClick={() => setKorean((prev) => !prev)} />
+        </StyledLi>
         {navList.map((nav, idx) => (
           <StyledLi key={idx}>
             <StyledA href={`#${nav}`}>{nav}</StyledA>

@@ -6,14 +6,17 @@ import profile from "../../../public/images/profile.jpeg";
 
 import Content from "./Content";
 
-const Profile = () => {
+const Profile = ({ korean }) => {
   const profileData = [
-    { category: "생년월일", content: "1993.10.08." },
-    { category: "전화번호", content: "010.2001.6554" },
-    { category: "이메일", content: "rytt@yonsei.ac.kr" },
-    { category: "깃허브", content: "https://github.com/joonseongpark" },
+    { category: korean ? "생년월일" : "Birthdate", content: "1993.10.08." },
+    { category: korean ? "전화번호" : "Phone", content: "010.2001.6554" },
+    { category: korean ? "이메일" : "E-mail", content: "rytt@yonsei.ac.kr" },
     {
-      category: "기술스택",
+      category: korean ? "깃허브" : "Github",
+      content: "https://github.com/joonseongpark",
+    },
+    {
+      category: korean ? "기술스택" : "Skills",
       content: ["JavaScript", "Webpack", "React", "Node.js", "Python"],
     },
   ];
