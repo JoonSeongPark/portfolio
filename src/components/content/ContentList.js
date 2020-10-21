@@ -8,7 +8,7 @@ const ContentList = ({ korean }) => {
   const contentData = [
     {
       id: "Education",
-      title: "Education",
+      title: "EDUCATION",
       infoArr: [
         {
           period: "2009.03 - 2012.02",
@@ -31,7 +31,7 @@ const ContentList = ({ korean }) => {
     },
     {
       id: "Experience",
-      title: "Experience",
+      title: "EXPERIENCE",
       infoArr: [
         {
           period: "2017.02 - 2017.07",
@@ -93,7 +93,7 @@ const ContentList = ({ korean }) => {
         },
       ],
     },
-    { id: "Project", title: "Project", infoArr: [] },
+    { id: "Project", title: "PROJECT", infoArr: [] },
   ];
 
   return (
