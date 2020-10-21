@@ -29,11 +29,11 @@ const StyledNavContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.6rem;
   background-color: rgba(244, 244, 244, 0.9);
   border-bottom: 1px solid #ddd;
   width: 100vw;
-  height: 3.5rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
   z-index: 100;
@@ -54,9 +54,9 @@ const StyledLi = styled.li`
 
 const StyledA = styled.a`
   text-decoration: none;
-  color: black;
+  color: #0f4f81;
   &:hover {
-    color: #0f4f81;
+    color: black;
   }
 `;
 

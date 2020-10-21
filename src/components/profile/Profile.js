@@ -47,7 +47,7 @@ const BackgroundContainer = styled.div`
   background-position: center center;
   height: 37.5rem;
   width: 100vw;
-  margin-top: 3.5rem;
+  margin-top: 4rem;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -55,7 +55,7 @@ const BackgroundContainer = styled.div`
   &:after {
     content: "";
     position: absolute;
-    top: 3.5rem;
+    top: 4rem;
     left: 0;
     height: 37.5rem;
     width: 100vw;
