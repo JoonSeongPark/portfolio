@@ -106,7 +106,7 @@ const ContentList = ({ korean }) => {
           {data.id !== "Project" ? (
             <TimeLine infoArr={data.infoArr} />
           ) : (
-            <Project />
+            <Project korean={korean} />
           )}
         </StyledContainer>
       ))}

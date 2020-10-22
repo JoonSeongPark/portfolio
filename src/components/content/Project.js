@@ -10,23 +10,49 @@ import baseball from "../../../public/images/baseball.png";
 import dplan from "../../../public/images/dplan.png";
 import mychat from "../../../public/images/mychat.png";
 
-const Project = () => {
+const Project = ({ korean }) => {
   const projectData = [
-    { image: maskod, gridColumn: "1/3" },
-    { image: fwine, gridColumn: "3/4" },
-    { image: vqa, gridColumn: "1/2" },
-    { image: baseball, gridColumn: "2/4" },
-    { image: dplan, gridColumn: "1/3" },
-    { image: mychat, gridColumn: "3/4" },
+    {
+      name: korean ? "마스크어디?" : "MASKOD?",
+      image: maskod,
+      gridColumn: "1/3",
+      url: "https://maskod.kr",
+    },
+    {
+      name: "fwine",
+      image: fwine,
+      gridColumn: "3/4",
+      url: "https://github.com/joonseongpark/fwine",
+    },
+    {
+      name: "VQA",
+      image: vqa,
+      gridColumn: "1/2",
+      url: "https://github.com/joonseongpark/vqa",
+    },
+    {
+      name: korean ? "그 남자의 존" : "KBO: Strike Zone",
+      image: baseball,
+      gridColumn: "2/4",
+      url: "https://joonseongpark.github.io/ybigtabaseball/",
+    },
+    {
+      name: "DPLAN360",
+      image: dplan,
+      gridColumn: "1/3",
+      url: "private",
+    },
+    {
+      name: "My Chat App",
+      image: mychat,
+      gridColumn: "3/4",
+      url: "private",
+    },
   ];
   return (
     <StyledContainer>
       {projectData.map((data, idx) => (
-        <ProjectItem
-          key={idx}
-          image={data.image}
-          gridColumn={data.gridColumn}
-        />
+        <ProjectItem key={idx} data={data} />
       ))}
     </StyledContainer>
   );
@@ -35,7 +61,7 @@ const Project = () => {
 const StyledContainer = styled.div`
   padding: 80px 0;
   margin: auto;
-  width: 70vw;
+  width: 65vw;
   display: grid;
   grid-template-rows: 24vw 24vw 24vw;
   grid-template-columns: 1fr 1fr 1fr;
