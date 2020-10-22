@@ -75,7 +75,7 @@ const ContentList = ({ korean }) => {
           ],
         },
         {
-          period: "2020.05 - 2018.07",
+          period: "2020.05 - 2020.07",
           info: korean
             ? [
                 "미디어 렙사, DPLAN360",
