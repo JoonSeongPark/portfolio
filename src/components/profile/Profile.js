@@ -8,8 +8,11 @@ import ProfileContent from "./ProfileContent";
 
 const Profile = ({ korean }) => {
   const profileData = [
-    { category: korean ? "생년월일" : "Birthdate", content: "1993.10.08." },
-    { category: korean ? "전화번호" : "Phone", content: "010.2001.6554" },
+    { category: korean ? "생년월일" : "Birth", content: "1993.10.08." },
+    {
+      category: korean ? "전화번호" : "Phone",
+      content: korean ? "010.2001.6554" : "+82-10-2001-6554",
+    },
     { category: korean ? "이메일" : "E-mail", content: "rytt@yonsei.ac.kr" },
     {
       category: korean ? "깃허브" : "Github",
@@ -17,7 +20,7 @@ const Profile = ({ korean }) => {
     },
     {
       category: korean ? "기술스택" : "Skills",
-      content: ["JavaScript", "Webpack", "React", "Node.js", "Python"],
+      content: ["JavaScript", "Webpack", "React", "Node", "Express", "Python"],
     },
   ];
   return (
