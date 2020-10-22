@@ -7,6 +7,8 @@ import maskod from "../../../public/images/maskod.png";
 import fwine from "../../../public/images/fwine.png";
 import vqa from "../../../public/images/vqa.png";
 import baseball from "../../../public/images/baseball.png";
+import dplan from "../../../public/images/dplan.png";
+import mychat from "../../../public/images/mychat.png";
 
 const Project = () => {
   const projectData = [
@@ -14,6 +16,8 @@ const Project = () => {
     { image: fwine, gridColumn: "3/4" },
     { image: vqa, gridColumn: "1/2" },
     { image: baseball, gridColumn: "2/4" },
+    { image: dplan, gridColumn: "1/3" },
+    { image: mychat, gridColumn: "3/4" },
   ];
   return (
     <StyledContainer>
@@ -33,7 +37,7 @@ const StyledContainer = styled.div`
   margin: auto;
   width: 70vw;
   display: grid;
-  grid-template-rows: 24vw 24vw;
+  grid-template-rows: 24vw 24vw 24vw;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1.2rem;
 `;
