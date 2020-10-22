@@ -54,6 +54,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "..", "public", "index.html"),
+      favicon: path.join(__dirname, "..", "public", "images", "favicon.jpg"),
     }),
     new CleanWebpackPlugin(),
     new CompressionPlugin(),
