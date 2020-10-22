@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Title from "./Title";
 import TimeLine from "./TimeLine";
+import Project from "./Project";
 
 const ContentList = ({ korean }) => {
   const contentData = [
@@ -102,8 +103,11 @@ const ContentList = ({ korean }) => {
         <StyledContainer key={data.id}>
           <PseudoDiv id={data.id} />
           <Title title={data.title} />
-
-          <TimeLine infoArr={data.infoArr} />
+          {data.id !== "Project" ? (
+            <TimeLine infoArr={data.infoArr} />
+          ) : (
+            <Project />
+          )}
         </StyledContainer>
       ))}
     </>
