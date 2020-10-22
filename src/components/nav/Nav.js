@@ -12,14 +12,14 @@ const Nav = ({ setKorean }) => {
     <StyledNavContainer>
       <img src={logo} height={"100%"} />
       <StyledUl>
-        <StyledLi>
-          <StyledIcon onClick={() => setKorean((prev) => !prev)} />
-        </StyledLi>
         {navList.map((nav, idx) => (
           <StyledLi key={idx}>
             <StyledA href={`#${nav}`}>{nav}</StyledA>
           </StyledLi>
         ))}
+        <StyledLi>
+          <StyledIcon onClick={() => setKorean((prev) => !prev)} />
+        </StyledLi>
       </StyledUl>
     </StyledNavContainer>
   );
