@@ -2,7 +2,6 @@ const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
@@ -57,10 +56,6 @@ module.exports = {
       template: path.join(__dirname, "..", "public", "index.html"),
     }),
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerMode: "static",
-      openAnalyzer: false,
-    }),
     new CompressionPlugin(),
   ],
 };
